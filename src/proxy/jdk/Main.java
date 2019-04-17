@@ -1,6 +1,6 @@
-package proxy;
+package proxy.jdk;
 
-import sun.rmi.runtime.Log;
+import proxy.cglib.Cglib;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
@@ -11,6 +11,7 @@ public class Main {
 
         TargetSubject targetSubject = new TargetSubject();
         InvocationHandler handler = new DynamicInvocationHandler(targetSubject);
+
 
         //创建代理类的实例
         Subject proxySubject = (Subject) Proxy.newProxyInstance(targetSubject.getClass()
