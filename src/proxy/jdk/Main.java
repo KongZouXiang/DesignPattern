@@ -1,6 +1,7 @@
 package proxy.jdk;
 
 import proxy.cglib.Cglib;
+import proxy.interfaceInstance.MethodProxyFactory;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
