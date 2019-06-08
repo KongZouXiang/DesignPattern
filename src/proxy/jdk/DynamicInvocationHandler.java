@@ -2,6 +2,7 @@ package proxy.jdk;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
 import java.lang.reflect.Proxy;
 
 public class DynamicInvocationHandler implements InvocationHandler {
@@ -16,6 +17,16 @@ public class DynamicInvocationHandler implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Exception {
+
+        System.out.println(args.toString());
+
+
+        Parameter[] parameters = method.getParameters();
+        for (Parameter parameter : parameters) {
+            System.out.println(parameter.getName());
+            System.out.println(parameter.toString());
+        }
+
 
         System.out.println("miss08, 开始执行代理方法，处理的方法是 ： " + method.getName());
 

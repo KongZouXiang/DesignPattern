@@ -23,6 +23,6 @@ public class Main {
         //调用代理类的getResponse方法
         proxySubject.getResponse("http://192.168.1.100:8080/currentTime");
 
-        proxySubject.getCookie("111");
+//        proxySubject.getCookie("111");
     }
 }
